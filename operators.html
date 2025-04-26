@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript variables</title>
+</head>
+<body>
+    <!--  变量运算 -->
+    <script>
+        // 赋值运算
+        let itemPrice = 32;
+        let itemQuantity = 4;
+        let totalPrice = itemPrice * itemQuantity;
+        console.log("共计" + totalPrice);
+        // 控制语句
+        let currentTime = 14;
+        if (currentTime <= 12) {
+            console.log("上午好");
+        } else if (currentTime < 18 && currentTime > 12) {
+            console.log("下午好");
+        } else {
+            console.log("晚上好");
+        }
+        // 循环语句
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        // 函数向特点的人问好
+        function greet(name) {
+            console.log("你好" + name);
+        }
+        greet("Terence");
+        // 加法运算函数
+        function add(a, b) {
+            let result = a+ b;
+            return result;
+        }
+        console.log(add(2,3));
+        // 数组的遍历
+        let studentName = ["李涵锐","韩愈","欧阳修","苏轼","王安石"];
+        for (let i = 0; i < studentName.length; i++) {
+            console.log("你的名字是" + studentName[i]);
+        }
+        // DOM操作示例点击图片后改变图片
+        let doubleClickImage = document.getElementById("myImage");
+        function changeImage() {
+            doubleClickImage.setAttribute("src", "image.jpg");
+        }
+        // 事件监听-点击图片后改变图片
+      //  doubleClickImage.addEventListener("dblclick", changeImage);   
+    </script>
+
+    
+</body>
+</html>
