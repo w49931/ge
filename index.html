@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮监听器示例</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>按钮监听器示例</h1>
+    <button id="myButton">点击我</button>
+    <p id="message"></p>
+
+    <script>
+        // 获取按钮和消息段落的引用
+        const button = document.getElementById('myButton');
+        const message = document.getElementById('message');
+
+        // 添加点击事件监听器
+        button.addEventListener('click', function() {
+            message.textContent = '按钮已被点击！';
+        });
+    </script>
+</body>
+</html> 

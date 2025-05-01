@@ -5,11 +5,102 @@ body {
     color: #333;
 }
 
-h1 {
-    color: #2c3e50;
+/* 标题样式 */
+.todoTitle {
+    color: #525151;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 去除列表样式 */
+ul {
+    list-style: none;
+}
+
+
+
+.todoContainer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* 输入框和添加按钮样式 */
+#userInput{
+    display: flex;
+    width: 70%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}
+
+#addButton{
+    display: flex;
+    /* width: 20%; */
+    /* padding: 10px; */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 2px;
 }
 
 .highlight {
     background-color: #ffeb3b; /* 高亮背景色 */
     font-weight: bold; /* 加粗文本 */
 } 
+
+#todoList ul{
+    margin-top: 20px;
+    padding-left: 0;
+    padding: 2px;
+}
+
+#todoList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#todoList li:hover{
+    background-color: #f0f0f0;
+    color: #888;
+}
+#todoList li input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.deleteButton{
+    border-radius: 5px;
+    /* border: 1px solid #ccc; */
+    border: none;
+    color: #fff;
+    font-size: 0.8rem;
+    background-color: #f27575;
+    transition: background-color 0.3s ease;
+}
+.deleteButton:hover{
+    background-color: #f26666;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
