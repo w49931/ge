@@ -103,4 +103,72 @@ ul {
 .completed{
     text-decoration: line-through;
 }
+/* styles.css */
+
+/* 模态框容器（遮罩层）的样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定在屏幕上，不随页面滚动 */
+    z-index: 1; /* 确保它在其他内容之上 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 宽度占满视口 */
+    height: 100%; /* 高度占满视口 */
+    overflow: auto; /* 如果内容太多，允许滚动 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+
+    /* 使用 Flexbox 将模态框内容居中 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+
+    /* 注意：因为 display: none; 覆盖了 display: flex;，
+       所以默认是隐藏的。我们将用 JavaScript 添加 .show 类来改变 display 属性 */
+}
+
+/* 用于显示模态框的类 */
+.modal.show {
+     display: flex; /* 当有 .show 类时，显示为 flex，从而可见 */
+}
+
+
+/* 模态框内容主体的样式 */
+.modal-content {
+    background-color: #fefefe; /* 白色背景 */
+    padding: 20px;
+    border: 1px solid #888; /* 边框 */
+    border-radius: 10px; /* 圆角 */
+    width: 80%; /* 内容宽度占比 */
+    max-width: 600px; /* 最大宽度 */
+    position: relative; /* 为了让内部的关闭按钮可以绝对定位 */
+    box-shadow: 0 5px 15px rgba(0,0,0,.5); /* 添加阴影效果 */
+    /* 如果未使用 flexbox/grid 居中父元素，这里可以使用 margin: 10% auto; 等方式 */
+}
+
+/* 关闭按钮的样式 */
+.close-btn {
+    color: #aaa; /* 灰色 */
+    font-size: 28px; /* 字体大小 */
+    font-weight: bold;
+    position: absolute; /* 绝对定位，相对于 .modal-content */
+    top: 10px; /* 距离顶部的距离 */
+    right: 15px; /* 距离右侧的距离 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+}
+
+/* 关闭按钮悬停时的样式 */
+.close-btn:hover,
+.close-btn:focus {
+    color: #000; /* 悬停变黑色 */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 可以给 body 加一些样式，让页面有内容可以滚动，方便测试 fixed 定位 */
+/*
+body {
+    height: 2000px; // 示例：让页面很高，出现滚动条
+    font-family: sans-serif;
+}
+*/
 
